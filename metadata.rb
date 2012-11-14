@@ -15,6 +15,7 @@ end
 
 recipe "php", "Installs php"
 recipe "php::package", "Installs php using packages."
+recipe "php::package_php54", "Installs PHP 5.4 using packages."
 recipe "php::source", "Installs php from source."
 recipe "php::module_apc", "Install the php5-apc package"
 recipe "php::module_curl", "Install the php5-curl package"
