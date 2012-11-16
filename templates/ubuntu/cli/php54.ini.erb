@@ -1817,6 +1817,8 @@ ldap.max_links = -1
 ; tab-width: 4
 ; End:
 
+; :begin / Chef configuration definitions
 <% node['php']['directives'].each do |directive, value| -%>
-<%= "#{directive}=\"#{value}\"" %>
+<%= "#{directive} = #{value}" %>
 <% end -%>
+; :end / Chef configuration definitions
