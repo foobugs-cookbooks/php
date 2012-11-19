@@ -23,6 +23,10 @@ if node["platform_family"] == "debian"
     action :install
   end
 
+  service "php5-fpm" do
+    action :nothing
+  end
+
   template "#{node['php']['conf_dir']}/fpm/php.ini" do
     source "fpm/php54.ini.erb"
     owner "root"
@@ -31,8 +35,4 @@ if node["platform_family"] == "debian"
     only_if {File.exists?("#{node['php']['conf_dir']}/fpm/php.ini")}
     notifies :restart, resources(:service => "php5-fpm")
   end
-
-  # service "php5-fpm" do
-  #   action :restart
-  # end
 end
