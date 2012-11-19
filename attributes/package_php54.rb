@@ -1,5 +1,5 @@
 #
-# Author::  René Oelke (<rene.oelke@foobugs.com>)
+# Author:: René Oelke (<rene.oelke@foobugs.com>)
 # Cookbook Name:: php
 # Attribute:: package_php54
 #
@@ -21,5 +21,15 @@
 # Override default attributes
 case node["platform_family"]
 when "debian"
-  node.override['php']['conf_dir'] = '/etc/php5'
+  node.override["php"]["conf_dir"] = "/etc/php5"
 end
+
+# Composer attributes
+default["php"]["composer"]["install_path"] = "/usr/share/php"
+default["php"]["composer"]["exec_path"] = "/usr/bin"
+
+# Phing attributes
+default["php"]["phing"]["channel"] = "pear.phing.info"
+
+# PHPUnit attributes
+default["php"]["phpunit"]["channel"] = "pear.phpunit.de"
