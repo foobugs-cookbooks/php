@@ -55,14 +55,6 @@ pkgs.each do |pkg|
 end
 
 if node["platform_family"] == "debian"
-  template "#{node['php']['conf_dir']}/apache2/php.ini" do
-    source "apache2/php54.ini.erb"
-    owner "root"
-    group "root"
-    mode "0644"
-    only_if {File.exists?("#{node['php']['conf_dir']}/apache2/php.ini")}
-  end
-
   template "#{node['php']['conf_dir']}/cgi/php.ini" do
     source "cgi/php54.ini.erb"
     owner "root"
