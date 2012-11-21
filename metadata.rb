@@ -28,6 +28,7 @@ recipe "php::module_pgsql", "Install the php5-pgsql packag"
 recipe "php::module_sqlite3", "Install the php5-sqlite3 package"
 
 recipe "php::package_php54", "Installs PHP 5.4 using packages."
+recipe "php::phbuild", "Installs phpbuild for compiling PHP"
 recipe "php::source_php54", "Installs PHP 5.4 using sources."
 recipe "php::source_php55", "Installs PHP 5.5 using sources."
 recipe "php::fpm", "Installs FastCGI Process Manager"

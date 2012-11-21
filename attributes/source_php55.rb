@@ -1,7 +1,7 @@
 #
-# Author::  René Oelke (<rene.oelke@foobugs.com>)
+# Author:: René Oelke (<rene.oelke@foobugs.com>)
 # Cookbook Name:: php
-# Recipe:: source_php55
+# Attribute:: source_php55
 #
 # Copyright 2012, foobugs Oelke & Eichner GbR
 #
@@ -18,12 +18,5 @@
 # limitations under the License.
 #
 
-include_recipe "php::phpbuild"
-
-php_build "#{node["php"]["source_php55"]["prefix"]}" do
-  version "#{node["php"]["source_php55"]["version"]}"
-  owner {Chef::Config[:user]}
-  group {Chef::Config[:group]}
-
-  action  :create
-end
+default["php"]["source_php55"]["prefix"] = "/usr/local"
+default["php"]["source_php55"]["version"] = "5.5.0alpha1"

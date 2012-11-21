@@ -17,3 +17,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+include_recipe "php::phpbuild"
+
+php_build "#{node["php"]["source_php54"]["prefix"]}" do
+  version "#{node["php"]["source_php54"]["version"]}"
+  owner {Chef::Config[:user]}
+  group {Chef::Config[:group]}
+
+  action  :create
+end
