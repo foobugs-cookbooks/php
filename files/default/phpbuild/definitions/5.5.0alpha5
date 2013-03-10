@@ -1,0 +1,2 @@
+install_package "http://downloads.php.net/dsp/php-5.5.0alpha5.tar.bz2"
+install_pyrus
