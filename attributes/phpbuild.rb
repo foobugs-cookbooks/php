@@ -51,4 +51,4 @@ default["php"]["phpbuild"]["arch"] = (kernel['machine'] =~ /x86_64/ ? "x86_64" :
 default["php"]["phpbuild"]["path"] = "php-build"
 
 default["php"]["phpbuild"]["git_repository"] = "git://github.com/CHH/php-build.git"
-default["php"]["phpbuild"]["git_revision"] = "807ef1e1c79d2e010da58e50861ebd55b9bd1adb"
+default["php"]["phpbuild"]["git_revision"] = "ccbc8dfed6fc625379a98e6d5c1404b2c891e1a7"
