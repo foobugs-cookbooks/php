@@ -24,7 +24,7 @@ if node["platform_family"] == "debian"
   case node["lsb"]["codename"]
   when "lucid", "natty", "oneiric", "precise"
     apt_repository "ondrej-php54" do
-      uri "http://ppa.launchpad.net/ondrej/php5/ubuntu"
+      uri "http://ppa.launchpad.net/ondrej/php5-oldstable/ubuntu"
       distribution node["lsb"]["codename"]
       components ["main"]
       deb_src true
