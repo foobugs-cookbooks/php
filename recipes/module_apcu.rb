@@ -27,10 +27,10 @@ when "rhel", "fedora"
   end
   php_pear "apcu" do
     action :install
-    directives(:shm_size => "32M", :enable_cli => 1)
+    directives(:shm_size => "32M", :enable_cli => 1, :enabled => 1, :ttl => 7200)
   end
 when "debian"
-  package "php-apcu" do
+  package "php5-apcu" do
     action :install
   end
 end
